@@ -111,7 +111,7 @@ pub fn nstime_to_string(
 }
 
 pub fn time_to_nstime(t: &time::OffsetDateTime) -> i64 {
-    t.unix_timestamp()
+    t.unix_timestamp_nanos() as i64
 }
 
 /// Utility function safely converting a slice of `c_char` values into a `String`.
